@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="required">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/hostal_management_system/lib/mysql-connector-j-8.0.32.jar!/" />
+      <root url="file://$PROJECT_DIR$/src/lk/ijse/hostal_management_system/lib/required" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/src/lk/ijse/hostal_management_system/lib/required" recursive="false" />
+  </library>
+</component>
