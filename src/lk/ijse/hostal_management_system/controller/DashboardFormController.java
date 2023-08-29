@@ -26,7 +26,7 @@ public class DashboardFormController {
     @FXML
     void StudentButtonOnAction(ActionEvent event) throws IOException {
 
-        Parent dashboardParent = FXMLLoader.load(getClass().getResource("/resources/view/Dashboard_Form.fxml"));
+        Parent dashboardParent = FXMLLoader.load(getClass().getResource("/resources/view/Student_Form.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene dashboardScene = new Scene(dashboardParent);
         stage.setScene(dashboardScene);

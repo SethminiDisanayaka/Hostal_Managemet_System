@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -16,7 +15,7 @@
    <children>
       <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/Desktop - 4.png" />
+            <Image url="@../img/Desktop%20-%204.png" />
          </image>
       </ImageView>
       <Button layoutX="150.0" layoutY="206.0" minHeight="53.0" minWidth="138.0" mnemonicParsing="false" onAction="#NewButtonOnAction" style="-fx-background-radius: 25;" text="+New">
@@ -24,22 +23,22 @@
             <Font name="Britannic Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnCancel" layoutX="577.0" layoutY="684.0" minHeight="53.0" minWidth="138.0" mnemonicParsing="false" onAction="#CancelButtonOnAvtion" style="-fx-background-radius: 25;" text="Cancel">
+      <Button layoutX="577.0" layoutY="684.0" minHeight="53.0" minWidth="138.0" mnemonicParsing="false" onAction="#CancelButtonOnAvtion" style="-fx-background-radius: 25;" text="Cancel">
          <font>
             <Font name="Britannic Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnDelete" layoutX="346.0" layoutY="684.0" minHeight="53.0" minWidth="138.0" mnemonicParsing="false" onAction="#DeleteButtonOnAction" style="-fx-background-radius: 25;" text="Delete">
+      <Button layoutX="346.0" layoutY="684.0" minHeight="53.0" minWidth="138.0" mnemonicParsing="false" onAction="#DeleteButtonOnAction" style="-fx-background-radius: 25;" text="Delete">
          <font>
             <Font name="Britannic Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnSave" layoutX="122.0" layoutY="684.0" minHeight="53.0" minWidth="138.0" mnemonicParsing="false" onAction="#SaveButtonOnAction" style="-fx-background-radius: 25;" text="Save">
+      <Button layoutX="122.0" layoutY="684.0" minHeight="53.0" minWidth="138.0" mnemonicParsing="false" onAction="#SaveButtonOnAction" style="-fx-background-radius: 25;" text="Save">
          <font>
             <Font name="Britannic Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnEdit" layoutX="415.0" layoutY="205.0" minHeight="53.0" minWidth="138.0" mnemonicParsing="false" onAction="#EditButtonOnAction" style="-fx-background-radius: 25;" text="Edit">
+      <Button layoutX="415.0" layoutY="205.0" minHeight="53.0" minWidth="138.0" mnemonicParsing="false" onAction="#EditButtonOnAction" style="-fx-background-radius: 25;" text="Edit">
          <font>
             <Font name="Britannic Bold" size="12.0" />
          </font>
@@ -48,6 +47,7 @@
       <TextField fx:id="txtStudentName" layoutX="323.0" layoutY="353.0" minHeight="31.0" minWidth="323.0" style="-fx-background-radius: 25;" />
       <TextField fx:id="txtStudentAddress" layoutX="323.0" layoutY="401.0" minHeight="31.0" minWidth="323.0" style="-fx-background-radius: 25;" />
       <TextField fx:id="txtContact" layoutX="322.0" layoutY="450.0" minHeight="31.0" minWidth="323.0" style="-fx-background-radius: 25;" />
+      <TextField fx:id="txtDoB" layoutX="323.0" layoutY="497.0" minHeight="31.0" minWidth="323.0" style="-fx-background-radius: 25;" />
       <RadioButton fx:id="radMale" layoutX="346.0" layoutY="556.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="69.0" text="Male">
          <font>
             <Font name="Britannic Bold" size="14.0" />
@@ -68,6 +68,5 @@
             <TableColumn fx:id="tblGender" prefWidth="179.199951171875" text="Gender" />
         </columns>
       </TableView>
-      <DatePicker layoutX="323.0" layoutY="497.0" minHeight="31.0" minWidth="323.0" prefHeight="31.0" prefWidth="323.0" style="-fx-background-radius: 25;" />
    </children>
 </AnchorPane>
