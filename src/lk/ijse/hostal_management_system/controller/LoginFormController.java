@@ -2,10 +2,17 @@ package lk.ijse.hostal_management_system.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-    public class LoginFormController {
+import java.io.IOException;
+
+public class LoginFormController {
         @FXML
         private Button btnLogin;
 
@@ -16,8 +23,12 @@ import javafx.scene.control.TextField;
         private TextField txtUsername;
 
         @FXML
-        void LoginButtonOnAction(ActionEvent event) {
-
+        void LoginButtonOnAction(ActionEvent event) throws IOException {
+                Parent dashboardParent = FXMLLoader.load(getClass().getResource("/resources/view/Dashboard_Form.fxml"));
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                Scene dashboardScene = new Scene(dashboardParent);
+                stage.setScene(dashboardScene);
+                stage.show();
         }
 
         @FXML
@@ -25,5 +36,12 @@ import javafx.scene.control.TextField;
 
         }
 
-    }
+        public void ForgotButtonOnAction(ActionEvent actionEvent) {
+
+        }
+
+        public void SignupButtonOnAction(ActionEvent actionEvent) {
+
+        }
+}
 

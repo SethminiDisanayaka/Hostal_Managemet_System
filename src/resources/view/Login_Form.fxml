@@ -18,7 +18,7 @@
       </ImageView>
       <TextField fx:id="txtUsername" layoutX="914.0" layoutY="674.0" prefHeight="76.0" prefWidth="513.0" promptText="UserName" style="-fx-background-radius: 25; -fx-background-color: #878282;" />
       <TextField fx:id="txtPassowrd" layoutX="914.0" layoutY="804.0" prefHeight="76.0" prefWidth="513.0" promptText="Password" style="-fx-background-radius: 25; -fx-background-color: #878282;" />
-      <Button fx:id="btnLogin" layoutX="1367.0" layoutY="955.0" minHeight="75.0" minWidth="256.0" mnemonicParsing="false" onAction="#LoginButtonOnAction" style="-fx-background-radius: 25; -fx-background-color: #878282;" text="Login">
+      <Button fx:id="btnLogin" layoutX="491.0" layoutY="956.0" minHeight="75.0" minWidth="256.0" mnemonicParsing="false" onAction="#LoginButtonOnAction" style="-fx-background-radius: 25; -fx-background-color: #878282;" text="Login">
          <font>
             <Font name="Consolas" size="42.0" />
          </font>
@@ -29,6 +29,16 @@
             <Image url="@../img/icons8-eye-24.png" />
          </image>
       </ImageView>
+      <Button fx:id="btnPassword" layoutX="1364.0" layoutY="956.0" minHeight="75.0" minWidth="256.0" mnemonicParsing="false" onAction="#ForgotButtonOnAction" style="-fx-background-radius: 25; -fx-background-color: #878282;" text="Forgot Password">
+         <font>
+            <Font name="Consolas" size="42.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSignup" layoutX="906.0" layoutY="956.0" minHeight="75.0" minWidth="256.0" mnemonicParsing="false" onAction="#SignupButtonOnAction" style="-fx-background-radius: 25; -fx-background-color: #878282;" text="SignUp">
+         <font>
+            <Font name="Consolas" size="42.0" />
+         </font>
+      </Button>
 
 
    </children>
