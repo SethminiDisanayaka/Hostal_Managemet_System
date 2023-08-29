@@ -13,14 +13,23 @@ import java.io.IOException;
 public class DashboardFormController {
 
     @FXML
-    void ReservationButtonOnAction(ActionEvent event) {
+    void ReservationButtonOnAction(ActionEvent event) throws IOException {
 
-
+        Parent dashboardParent = FXMLLoader.load(getClass().getResource("/resources/view/Reservation_Form.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene dashboardScene = new Scene(dashboardParent);
+        stage.setScene(dashboardScene);
+        stage.show();
     }
 
     @FXML
-    void RoomButtonOnAction(ActionEvent event) {
+    void RoomButtonOnAction(ActionEvent event) throws IOException {
 
+        Parent dashboardParent = FXMLLoader.load(getClass().getResource("/resources/view/Room_Form.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene dashboardScene = new Scene(dashboardParent);
+        stage.setScene(dashboardScene);
+        stage.show();
     }
 
     @FXML

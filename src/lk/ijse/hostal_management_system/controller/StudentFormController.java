@@ -2,9 +2,22 @@ package lk.ijse.hostal_management_system.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class StudentFormController {
+
+    @FXML
+    private Button btnBack;
 
     @FXML
     private Button btnCancel;
@@ -14,6 +27,9 @@ public class StudentFormController {
 
     @FXML
     private Button btnEdit;
+
+    @FXML
+    private Button btnNext;
 
     @FXML
     private Button btnSave;
@@ -55,6 +71,16 @@ public class StudentFormController {
     private TextField txtSyudentId;
 
     @FXML
+    void BackButtonOnAction(ActionEvent event) throws IOException {
+
+        Parent dashboardParent = FXMLLoader.load(getClass().getResource("/resources/view/Dashboard_Form.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene dashboardScene = new Scene(dashboardParent);
+        stage.setScene(dashboardScene);
+        stage.show();
+    }
+
+    @FXML
     void CancelButtonOnAvtion(ActionEvent event) {
 
     }
@@ -71,6 +97,11 @@ public class StudentFormController {
 
     @FXML
     void NewButtonOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void NextButtonOnAction(ActionEvent event) {
 
     }
 
