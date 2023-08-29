@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostal_management_system.controller.StudentFormController">
    <children>
       <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
@@ -58,7 +57,7 @@
             <Font name="Britannic Bold" size="14.0" />
          </font>
       </RadioButton>
-      <TableView layoutX="794.0" layoutY="159.0" prefHeight="777.0" prefWidth="1002.0">
+      <TableView layoutX="960.0" layoutY="139.0" prefHeight="777.0" prefWidth="1002.0">
         <columns>
           <TableColumn fx:id="tblId" prefWidth="120.0" text="Id" />
           <TableColumn fx:id="tblName" prefWidth="183.20001220703125" text="Name" />

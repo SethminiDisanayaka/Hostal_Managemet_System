@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostal_management_system.controller.DashboardFormController">
    <children>
       <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
@@ -35,5 +34,16 @@
          </font>
       </Button>
       <Button layoutX="64.0" layoutY="967.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="212.0" style="-fx-background-radius: 25;" text="ButtoBAckn" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane layoutX="28.0" layoutY="113.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane layoutX="48.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane layoutX="6.0" layoutY="-25.0" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
