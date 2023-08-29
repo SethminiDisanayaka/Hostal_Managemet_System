@@ -1,23 +1,18 @@
 package lk.ijse.hostal_management_system.entity;
 
 import lombok.*;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.time.LocalDate;
 
-
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @ToString
-@Cacheable
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @Entity
 
 public class Student {
@@ -28,6 +23,7 @@ public class Student {
     private String name;
     private String address;
     private String contactNo;
+    @Column(columnDefinition = "DATE")
     private LocalDate dob;
     private String gender;
 }
