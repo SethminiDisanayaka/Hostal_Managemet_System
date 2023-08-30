@@ -67,7 +67,7 @@
             <TableColumn fx:id="tblGender" prefWidth="179.199951171875" text="Gender" />
         </columns>
       </TableView>
-      <DatePicker layoutX="323.0" layoutY="497.0" minHeight="31.0" minWidth="323.0" prefHeight="31.0" prefWidth="323.0" style="-fx-background-radius: 25;" />
+      <DatePicker fx:id="datePicker" layoutX="323.0" layoutY="497.0" minHeight="31.0" minWidth="323.0" prefHeight="31.0" prefWidth="323.0" style="-fx-background-radius: 25;" />
       <Button fx:id="btnBack" layoutX="191.0" layoutY="815.0" minHeight="53.0" minWidth="138.0" mnemonicParsing="false" onAction="#BackButtonOnAction" style="-fx-background-radius: 25;" text="Back">
          <font>
             <Font name="Britannic Bold" size="12.0" />

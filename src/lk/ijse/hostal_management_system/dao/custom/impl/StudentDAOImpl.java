@@ -1,5 +1,6 @@
-package lk.ijse.hostal_management_system.dao;
+package lk.ijse.hostal_management_system.dao.custom.impl;
 
+import lk.ijse.hostal_management_system.dao.custom.StudentDAO;
 import lk.ijse.hostal_management_system.entity.Student;
 import lk.ijse.hostal_management_system.util.SessionFactoryConfig;
 import org.hibernate.Session;
@@ -9,7 +10,7 @@ import org.hibernate.query.NativeQuery;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentDAOImpl implements StudentDAO{
+public class StudentDAOImpl implements StudentDAO {
 
     public boolean add(Student student){
 
@@ -48,6 +49,7 @@ public class StudentDAOImpl implements StudentDAO{
     }
 
 
+    @Override
     public boolean delete(String id) {
         Session session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
