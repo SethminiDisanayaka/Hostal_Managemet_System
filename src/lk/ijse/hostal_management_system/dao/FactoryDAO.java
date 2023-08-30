@@ -1,5 +1,7 @@
 package lk.ijse.hostal_management_system.dao;
 
+import lk.ijse.hostal_management_system.dao.custom.impl.StudentDAOImpl;
+
 public class FactoryDAO {
     private static FactoryDAO factoryDAO;
 
@@ -17,4 +19,12 @@ public class FactoryDAO {
         JOIN_QUERY
     }
 
+    public SuperDAO getDAO(Types types) {
+        switch (types) {
+            case STUDENT:
+                return new StudentDAOImpl();
+            default:
+                return null;
+        }
+    }
 }
