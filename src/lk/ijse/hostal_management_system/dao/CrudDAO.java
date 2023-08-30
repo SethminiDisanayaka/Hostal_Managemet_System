@@ -1,4 +1,7 @@
 package lk.ijse.hostal_management_system.dao;
 
-public interface CrudDAO extends SuperDAO{
+import java.util.ArrayList;
+
+public interface CrudDAO<T> extends SuperDAO{
+
 }
