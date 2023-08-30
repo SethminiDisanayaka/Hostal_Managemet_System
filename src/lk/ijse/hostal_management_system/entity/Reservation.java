@@ -4,7 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,6 +18,7 @@ public class Reservation {
     private String res_id;
     @Column(columnDefinition = "DATE")
     private String res_date;
+    @Column
     private String status;
 
     @ManyToOne

@@ -18,8 +18,11 @@ public class Room {
     @Id
     @Column(name = "room_type_id")
     private String room_type_id;
+    @Column(name = "type")
     private String type;
+    @Column(name = "key_money")
     private String key_money;
+    @Column(name = "qty")
     private int qty;
 
     @OneToMany(mappedBy = "room" , cascade = CascadeType.ALL ,fetch = FetchType.LAZY)

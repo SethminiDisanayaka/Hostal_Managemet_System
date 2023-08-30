@@ -17,15 +17,18 @@ import java.util.List;
 @Entity
 
 public class Student {
-
     @Id
     @Column(name = "Student_id")
     private String studentId;
+    @Column(name = "name")
     private String name;
+    @Column(name = "address")
     private String address;
+    @Column(name = "Contact_no")
     private String contactNo;
-    @Column(columnDefinition = "DATE")
+    @Column(columnDefinition = "DATE",name = "date")
     private LocalDate dob;
+    @Column(name = "gender")
     private String gender;
 
     @OneToMany(mappedBy = "student",cascade = CascadeType.ALL ,fetch = FetchType.LAZY)

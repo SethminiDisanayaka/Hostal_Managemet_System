@@ -6,16 +6,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class StudentFormController {
 
+    @FXML
+    public DatePicker datePicker;
     @FXML
     private Button btnBack;
 
@@ -82,7 +82,7 @@ public class StudentFormController {
 
     @FXML
     void CancelButtonOnAvtion(ActionEvent event) {
-
+        clearFields();
     }
 
     @FXML
@@ -108,6 +108,15 @@ public class StudentFormController {
     @FXML
     void SaveButtonOnAction(ActionEvent event) {
 
+    }
+
+    private void clearFields(){
+        txtSyudentId.clear();
+        txtStudentName.clear();
+        txtStudentAddress.clear();
+        txtContact.clear();
+        datePicker.setValue(LocalDate.parse("2000-01-01"));
+        radMale.setSelected(true);
     }
 
 }
