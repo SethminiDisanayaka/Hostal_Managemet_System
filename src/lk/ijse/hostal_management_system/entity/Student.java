@@ -2,10 +2,10 @@ package lk.ijse.hostal_management_system.entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -26,4 +26,7 @@ public class Student {
     @Column(columnDefinition = "DATE")
     private LocalDate dob;
     private String gender;
+
+    @OneToMany(mappedBy = "student",cascade = CascadeType.ALL ,fetch = FetchType.LAZY)
+    private List<Reservation> reservationList = new ArrayList<>();
 }
