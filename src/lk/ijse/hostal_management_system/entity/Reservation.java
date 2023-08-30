@@ -12,6 +12,8 @@ import javax.persistence.*;
 @Setter
 @ToString
 @Entity
+@Table(name = "reservation")
+
 public class Reservation {
     @Id
     private String res_id;
