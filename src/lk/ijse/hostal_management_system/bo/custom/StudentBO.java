@@ -1,12 +1,11 @@
-package lk.ijse.hostal_management_system.controller.bo.custom;
+package lk.ijse.hostal_management_system.bo.custom;
 
-import lk.ijse.hostal_management_system.controller.bo.SuperBO;
+import lk.ijse.hostal_management_system.bo.SuperBO;
 import lk.ijse.hostal_management_system.dto.StudentDTO;
 
 import java.util.ArrayList;
 
 public interface StudentBO extends SuperBO {
-
     Boolean addStudent(StudentDTO studentDTO);
 
     Boolean deleteStudent(StudentDTO studentDTO);
@@ -17,4 +16,3 @@ public interface StudentBO extends SuperBO {
 
     Boolean updateStudent(StudentDTO studentDTO);
 }
-

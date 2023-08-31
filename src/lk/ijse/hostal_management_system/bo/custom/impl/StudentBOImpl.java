@@ -1,6 +1,6 @@
-package lk.ijse.hostal_management_system.controller.bo.custom.impl;
+package lk.ijse.hostal_management_system.bo.custom.impl;
 
-import lk.ijse.hostal_management_system.controller.bo.custom.StudentBO;
+import lk.ijse.hostal_management_system.bo.custom.StudentBO;
 import lk.ijse.hostal_management_system.dao.FactoryDAO;
 import lk.ijse.hostal_management_system.dao.custom.StudentDAO;
 import lk.ijse.hostal_management_system.dto.StudentDTO;
@@ -12,8 +12,7 @@ public class StudentBOImpl implements StudentBO {
 
     StudentDAO studentDAO = (StudentDAO) FactoryDAO.getFactoryDAO().getDAO(FactoryDAO.Types.STUDENT);
 
-
-    public Boolean addStudent(StudentDTO studentDTO){
+    public Boolean addStudent(StudentDTO studentDTO) {
         Student student = new Student(
                 studentDTO.getId(),
                 studentDTO.getName(),
@@ -24,34 +23,30 @@ public class StudentBOImpl implements StudentBO {
 
         return studentDAO.add(student);
     }
-
-
-    public Boolean deleteStudent(StudentDTO studentDTO){
+    public Boolean deleteStudent(StudentDTO studentDTO) {
         return studentDAO.delete(studentDTO.getId());
     }
 
-    public ArrayList<StudentDTO> getStudentData(){
-        ArrayList<StudentDTO> studentDTOS = new ArrayList<>();
+    public ArrayList<StudentDTO> getStudentData() {
+        ArrayList<StudentDTO> StudentDTOs = new ArrayList<>();
         ArrayList<Student> studentData = studentDAO.getData();
 
-        for(Student std : studentData){
-            studentDTOS.add(new StudentDTO(std.getStudentId(),
-                    std.getName(),
-                    std.getAddress(),
+        for (Student std : studentData) {
+            StudentDTOs.add(new StudentDTO(std.getStudentId(),
+                    std.getName(), std.getAddress(),
                     std.getContactNo(),
                     std.getDob(),
-                    std.getGender()
-                    ));
+                    std.getGender()));
         }
-        return studentDTOS;
+        return StudentDTOs;
     }
 
-    public String getCurrentID(){
+    public String getCurrentID() {
         return studentDAO.getCurrentID();
     }
 
     @Override
-    public Boolean updateStudent(StudentDTO studentDTO){
+    public Boolean updateStudent(StudentDTO studentDTO) {
         Student student = new Student(
                 studentDTO.getId(),
                 studentDTO.getName(),
@@ -60,6 +55,6 @@ public class StudentBOImpl implements StudentBO {
                 studentDTO.getDob(),
                 studentDTO.getGender());
 
-         return studentDAO.update(student);
+        return studentDAO.update(student);
     }
 }
