@@ -57,7 +57,7 @@
             <Font name="Britannic Bold" size="14.0" />
          </font>
       </RadioButton>
-      <TableView layoutX="796.0" layoutY="159.0" prefHeight="777.0" prefWidth="1002.0">
+      <TableView fx:id="tblStudent" layoutX="796.0" layoutY="159.0" prefHeight="777.0" prefWidth="1002.0">
         <columns>
           <TableColumn fx:id="tblId" prefWidth="120.0" text="Id" />
           <TableColumn fx:id="tblName" prefWidth="183.20001220703125" text="Name" />

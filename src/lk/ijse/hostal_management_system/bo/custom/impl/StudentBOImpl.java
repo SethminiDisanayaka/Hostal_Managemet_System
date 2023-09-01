@@ -14,7 +14,7 @@ public class StudentBOImpl implements StudentBO {
 
     public Boolean addStudent(StudentDTO studentDTO) {
         Student student = new Student(
-                studentDTO.getId(),
+                studentDTO.getStudent_id(),
                 studentDTO.getName(),
                 studentDTO.getAddress(),
                 studentDTO.getContact_no(),
@@ -24,7 +24,7 @@ public class StudentBOImpl implements StudentBO {
         return studentDAO.add(student);
     }
     public Boolean deleteStudent(StudentDTO studentDTO) {
-        return studentDAO.delete(studentDTO.getId());
+        return studentDAO.delete(studentDTO.getStudent_id());
     }
 
     public ArrayList<StudentDTO> getStudentData() {
@@ -42,13 +42,13 @@ public class StudentBOImpl implements StudentBO {
     }
 
     public String getCurrentID() {
-        return studentDAO.getCurrentID();
+        return String.valueOf(studentDAO.getCurrentID());
     }
 
     @Override
     public Boolean updateStudent(StudentDTO studentDTO) {
         Student student = new Student(
-                studentDTO.getId(),
+                studentDTO.getStudent_id(),
                 studentDTO.getName(),
                 studentDTO.getAddress(),
                 studentDTO.getContact_no(),

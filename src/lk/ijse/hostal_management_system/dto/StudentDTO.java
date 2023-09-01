@@ -9,16 +9,15 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class StudentDTO {
-    private String id;
+    private String student_id;
     private String name;
     private String address;
     private String contact_no;
     private String dob;
     private String gender;
 
-    public StudentDTO(String studentId, String name, String address, String contactNo, LocalDate dob, String gender) {
+    public StudentDTO(String id, String name, String address, String contactNo, LocalDate dob, String gender) {
 
     }
 }

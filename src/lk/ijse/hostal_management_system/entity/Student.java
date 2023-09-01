@@ -18,8 +18,9 @@ import java.util.List;
 
 public class Student {
     @Id
-    @Column(name = "Student_id")
-    private String studentId;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private String student_id;
     @Column(name = "name")
     private String name;
     @Column(name = "address")
@@ -34,7 +35,12 @@ public class Student {
     @OneToMany(mappedBy = "student",cascade = CascadeType.ALL ,fetch = FetchType.LAZY)
     private List<Reservation> reservationList = new ArrayList<>();
 
-    public Student(String id, String name, String address, String contact_no, String dob, String gender) {
+    public Student(String student_id, String name, String address, String contact_no, String dob, String gender) {
 
+    }
+
+
+    public String getStudentId() {
+        return student_id;
     }
 }

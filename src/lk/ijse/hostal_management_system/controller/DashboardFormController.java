@@ -40,6 +40,7 @@ public class DashboardFormController {
         Scene dashboardScene = new Scene(dashboardParent);
         stage.setScene(dashboardScene);
         stage.show();
+
     }
 
     @FXML
