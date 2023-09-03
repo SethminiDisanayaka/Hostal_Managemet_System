@@ -318,7 +318,16 @@ public class RoomFormController {
     }
 
     public void NewButtonOnAction(ActionEvent actionEvent) {
+        makeEditableTxtField(true);
+        clearFields();
 
+        btnEdit.setDisable(true);
+        btnDelete.setDisable(true);
+        btnCancel.setDisable(false);
+        btnSave.setDisable(false);
+        btnSave.setText("Save");
+        txtRoomTypeID.requestFocus();
+        txtRoomTypeID.setText("RM-");
     }
     private void setData(RoomDTO newValue) {
         txtRoomTypeID.setText(newValue.getRoom_type_id());
