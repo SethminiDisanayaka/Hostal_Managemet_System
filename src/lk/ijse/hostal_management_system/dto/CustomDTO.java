@@ -3,11 +3,13 @@ package lk.ijse.hostal_management_system.dto;
 import lk.ijse.hostal_management_system.entity.Reservation;
 import lk.ijse.hostal_management_system.entity.Room;
 import lk.ijse.hostal_management_system.entity.Student;
+import lombok.Data;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 public class CustomDTO {
 
     // reservation
