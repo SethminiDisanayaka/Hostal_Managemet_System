@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostal_management_system.controller.RoomFormController">
    <children>
       <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
@@ -42,7 +41,7 @@
             <Font name="Britannic Bold" size="12.0" />
          </font>
       </Button>
-      <TableView layoutX="795.0" layoutY="159.0" prefHeight="777.0" prefWidth="1002.0">
+      <TableView fx:id="tblRoom" layoutX="795.0" layoutY="159.0" prefHeight="777.0" prefWidth="1002.0">
         <columns>
           <TableColumn fx:id="tblRoomId" prefWidth="253.60003662109375" text="Room_Id" />
           <TableColumn fx:id="tblType" minWidth="0.0" prefWidth="192.800048828125" text="Type" />
@@ -50,10 +49,10 @@
             <TableColumn fx:id="tblQty" minWidth="0.0" prefWidth="288.0" text="QTY" />
         </columns>
       </TableView>
-      <TextField fx:id="txtSyudentId" layoutX="323.0" layoutY="301.0" minHeight="31.0" minWidth="323.0" style="-fx-background-radius: 25;" />
-      <TextField fx:id="txtSyudentId1" layoutX="323.0" layoutY="353.0" minHeight="31.0" minWidth="323.0" style="-fx-background-radius: 25;" />
-      <TextField fx:id="txtSyudentId2" layoutX="322.0" layoutY="401.0" minHeight="31.0" minWidth="323.0" style="-fx-background-radius: 25;" />
-      <TextField fx:id="txtSyudentId3" layoutX="323.0" layoutY="450.0" minHeight="31.0" minWidth="323.0" style="-fx-background-radius: 25;" />
+      <TextField fx:id="txtRoomTypeID" layoutX="323.0" layoutY="301.0" minHeight="31.0" minWidth="323.0" style="-fx-background-radius: 25;" />
+      <TextField fx:id="txtType" layoutX="323.0" layoutY="353.0" minHeight="31.0" minWidth="323.0" style="-fx-background-radius: 25;" />
+      <TextField fx:id="txtKeyMoney" layoutX="322.0" layoutY="401.0" minHeight="31.0" minWidth="323.0" style="-fx-background-radius: 25;" />
+      <TextField fx:id="txtQty" layoutX="323.0" layoutY="450.0" minHeight="31.0" minWidth="323.0" style="-fx-background-radius: 25;" />
       <Button fx:id="btnBack" layoutX="134.0" layoutY="744.0" minHeight="53.0" minWidth="138.0" mnemonicParsing="false" onAction="#BackButtonOnAction" style="-fx-background-radius: 25;" text="Back">
          <font>
             <Font name="Britannic Bold" size="12.0" />
