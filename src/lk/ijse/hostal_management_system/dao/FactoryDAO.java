@@ -1,5 +1,6 @@
 package lk.ijse.hostal_management_system.dao;
 
+import lk.ijse.hostal_management_system.dao.custom.impl.ReservationDAOImpl;
 import lk.ijse.hostal_management_system.dao.custom.impl.RoomDAOImpl;
 import lk.ijse.hostal_management_system.dao.custom.impl.StudentDAOImpl;
 
@@ -16,8 +17,8 @@ public class FactoryDAO {
     public enum Types{
         STUDENT,
         ROOM,
-        RESERVATION,
-        JOIN_QUERY
+        RECEPTION,
+        JOIN_QUERY,
     }
 
     public SuperDAO getDAO(Types types) {
@@ -26,6 +27,8 @@ public class FactoryDAO {
                 return new StudentDAOImpl();
             case ROOM:
                 return new RoomDAOImpl();
+            case RECEPTION:
+                return new ReservationDAOImpl();
             default:
                 return null;
         }

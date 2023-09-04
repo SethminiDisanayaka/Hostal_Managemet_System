@@ -28,6 +28,8 @@ public class StudentFormController {
     @FXML
     public DatePicker datePicker;
     @FXML
+    public ToggleGroup gender;
+    @FXML
     private TableView<StudentDTO> tblStudent;
     @FXML
     private Button btnBack;
@@ -201,7 +203,7 @@ public class StudentFormController {
             String contactText = txtContact.getText();
             String idText = txtSyudentId.getText();
             String dobText = datePicker.getValue().toString();
-            RadioButton rb = (RadioButton) (radMale.isSelected() ? radMale : radFemale);
+            RadioButton rb = (RadioButton) gender.getSelectedToggle();
             String genderText = rb.getText();
 
             if (isValidName() && isValidAddress() && isValidContact()) {
