@@ -3,7 +3,6 @@ package lk.ijse.hostal_management_system.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +18,7 @@ import java.util.List;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "student_id")
     private String student_id;
     @Column(name = "name")
     private String name;
@@ -27,20 +26,20 @@ public class Student {
     private String address;
     @Column(name = "Contact_no")
     private String contactNo;
-    @Column(columnDefinition = "DATE",name = "date")
-    private LocalDate dob;
+    @Column(columnDefinition = "DATE", name = "date")
+    private String dob;
     @Column(name = "gender")
     private String gender;
 
-    @OneToMany(mappedBy = "student",cascade = CascadeType.ALL ,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Reservation> reservationList = new ArrayList<>();
 
-    public Student(String student_id, String name, String address, String contact_no, String dob, String gender) {
-
-    }
-
-
-    public String getStudentId() {
-        return student_id;
+    public Student(String id, String name, String address, String contact_no, String dob, String gender) {
+        this.student_id = id;
+        this.name = name;
+        this.address = address;
+        this.contactNo = contact_no;
+        this.dob = dob;
+        this.gender = gender;
     }
 }

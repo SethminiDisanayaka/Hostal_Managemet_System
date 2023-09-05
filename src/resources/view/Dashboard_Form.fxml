@@ -10,10 +10,10 @@
    <children>
       <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/Desktop - 2.png" />
+            <Image url="@../img/Desktop%20-%202.png" />
          </image>
       </ImageView>
-      <Button layoutX="128.0" layoutY="502.0" minHeight="75.0" minWidth="374.0" mnemonicParsing="false" onAction="#ReservationButtonOnAction" style="-fx-background-radius: 25;" text="Reservation Management">
+      <Button layoutX="1005.0" layoutY="502.0" minHeight="75.0" minWidth="374.0" mnemonicParsing="false" onAction="#ReservationButtonOnAction" style="-fx-background-radius: 25;" text="Reservation Management">
          <font>
             <Font name="Algerian" size="18.0" />
          </font>
@@ -23,12 +23,12 @@
             <Font name="Algerian" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="1003.0" layoutY="502.0" minHeight="75.0" minWidth="374.0" mnemonicParsing="false" onAction="#RoomButtonOnAction" style="-fx-background-radius: 25;" text="Room Management">
+      <Button layoutX="578.0" layoutY="502.0" minHeight="75.0" minWidth="374.0" mnemonicParsing="false" onAction="#RoomButtonOnAction" style="-fx-background-radius: 25;" text="Room Management">
          <font>
             <Font name="Algerian" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="579.0" layoutY="502.0" minHeight="75.0" minWidth="374.0" mnemonicParsing="false" onAction="#StudentButtonOnAction" style="-fx-background-radius: 25;" text="Student Management">
+      <Button layoutX="128.0" layoutY="502.0" minHeight="75.0" minWidth="374.0" mnemonicParsing="false" onAction="#StudentButtonOnAction" style="-fx-background-radius: 25;" text="Student Management">
          <font>
             <Font name="Algerian" size="18.0" />
          </font>
@@ -45,5 +45,21 @@
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <ImageView fitHeight="235.0" fitWidth="368.0" layoutX="115.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="235.0" fitWidth="368.0" layoutX="125.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/our-students.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="235.0" fitWidth="368.0" layoutX="998.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/images.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="235.0" fitWidth="368.0" layoutX="578.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/gettyimages-1398803655-612x612.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

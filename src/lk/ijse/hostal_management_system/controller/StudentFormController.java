@@ -118,6 +118,25 @@ public class StudentFormController {
         loadStudentData("");
     }
 
+    private void loadStudentData(String SearchID) {
+        ObservableList<StudentDTO> list = FXCollections.observableArrayList();
+
+        ArrayList<StudentDTO> studentDTOS = studentBO.getStudentData();
+        for (StudentDTO std : studentDTOS) {
+            if (std.getStudent_id().contains(SearchID) ||
+                    std.getName().contains(SearchID) ||
+                    std.getAddress().contains(SearchID)) {
+                StudentDTO studentDTO = new StudentDTO(std.getStudent_id(),
+                        std.getName(), std.getAddress(),
+                        std.getContact_no(),
+                        std.getDob(),
+                        std.getGender());
+                list.add(studentDTO);
+            }
+        }
+        tblStudent.setItems(list);
+    }
+
     @FXML
     void BackButtonOnAction(ActionEvent event) throws IOException {
 
@@ -196,8 +215,7 @@ public class StudentFormController {
 
     @FXML
     void SaveButtonOnAction(ActionEvent event) {
-
-        if(!txtSyudentId.getText().equals("")|| txtStudentName.getText().equals("")||txtContact.getText().equals("")){
+        if (!txtStudentName.getText().equals("") || txtSyudentId.getText().equals("") || txtContact.getText().equals("")) {
             String nameText = txtStudentName.getText();
             String addressText = txtStudentAddress.getText();
             String contactText = txtContact.getText();
@@ -206,6 +224,7 @@ public class StudentFormController {
             RadioButton rb = (RadioButton) gender.getSelectedToggle();
             String genderText = rb.getText();
 
+            // regex
             if (isValidName() && isValidAddress() && isValidContact()) {
                 if (btnSave.getText().equals("Save")) {
                     StudentDTO studentDTO = new StudentDTO(idText, nameText, addressText, contactText, dobText, genderText);
@@ -236,7 +255,6 @@ public class StudentFormController {
                 new Alert(Alert.AlertType.WARNING, "Fill data !").show();
             }
         }
-
     }
 
     private void clearFields(){
@@ -293,24 +311,7 @@ public class StudentFormController {
         }
     }
 
-    private void loadStudentData(String SearchID) {
-        ObservableList<StudentDTO> list = FXCollections.observableArrayList();
 
-        ArrayList<StudentDTO> studentDTOS = studentBO.getStudentData();
-        for (StudentDTO std : studentDTOS) {
-            if (std.getStudent_id().contains(SearchID) ||
-                    std.getName().contains(SearchID) ||
-                    std.getAddress().contains(SearchID)) {
-                StudentDTO studentDTO = new StudentDTO(std.getStudent_id(),
-                        std.getName(), std.getAddress(),
-                        std.getContact_no(),
-                        std.getDob(),
-                        std.getGender());
-                list.add(studentDTO);
-            }
-        }
-        tblStudent.setItems(list);
-    }
 
     private void makeEditableTxtField(boolean b) {
         txtSyudentId.setEditable(b);

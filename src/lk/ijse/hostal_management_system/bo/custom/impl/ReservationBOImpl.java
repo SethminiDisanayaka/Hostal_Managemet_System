@@ -50,7 +50,7 @@ public class ReservationBOImpl implements ReservationBO {
         ArrayList<Student> studentData = studentDAO.getData();
 
         for (Student std : studentData) {
-            studentDTOs.add(new StudentDTO(std.getStudentId(),
+            studentDTOs.add(new StudentDTO(std.getStudent_id(),
                     std.getName(), std.getAddress(),
                     std.getContactNo(),
                     std.getDob(),

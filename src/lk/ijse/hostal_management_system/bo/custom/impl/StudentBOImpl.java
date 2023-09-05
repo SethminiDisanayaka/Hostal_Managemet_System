@@ -32,7 +32,7 @@ public class StudentBOImpl implements StudentBO {
         ArrayList<Student> studentData = studentDAO.getData();
 
         for (Student std : studentData) {
-            StudentDTOs.add(new StudentDTO(std.getStudentId(),
+            StudentDTOs.add(new StudentDTO(std.getStudent_id(),
                     std.getName(), std.getAddress(),
                     std.getContactNo(),
                     std.getDob(),
