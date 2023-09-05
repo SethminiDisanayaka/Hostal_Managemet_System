@@ -3,6 +3,7 @@ package lk.ijse.hostal_management_system.bo;
 import lk.ijse.hostal_management_system.bo.custom.impl.ReservationBOImpl;
 import lk.ijse.hostal_management_system.bo.custom.impl.RoomBOImpl;
 import lk.ijse.hostal_management_system.bo.custom.impl.StudentBOImpl;
+import lk.ijse.hostal_management_system.bo.custom.impl.UserBOImpl;
 
 public class BOFactory {
 
@@ -30,6 +31,8 @@ public class BOFactory {
                 return new RoomBOImpl();
             case RECEPTION:
                 return new ReservationBOImpl();
+            case USER:
+                return new UserBOImpl();
             default:
                 return null;
         }
