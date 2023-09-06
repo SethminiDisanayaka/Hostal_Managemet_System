@@ -44,8 +44,12 @@ public class DashboardFormController {
     }
 
     @FXML
-    void UserButtonOnAction(ActionEvent event) {
-
+    void UserButtonOnAction(ActionEvent event) throws IOException {
+        Parent dashboardParent = FXMLLoader.load(getClass().getResource("/resources/view/ChangePassword.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene dashboardScene = new Scene(dashboardParent);
+        stage.setScene(dashboardScene);
+        stage.show();
     }
 
 }

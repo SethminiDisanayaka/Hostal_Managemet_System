@@ -90,7 +90,7 @@ public class StudentFormController {
     public void initialize() {
         txtSyudentId.setEditable(false);
 
-        tblId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tblId.setCellValueFactory(new PropertyValueFactory<>("student_id"));
         tblName.setCellValueFactory(new PropertyValueFactory<>("name"));
         tblAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
         tblContact.setCellValueFactory(new PropertyValueFactory<>("contact_no"));

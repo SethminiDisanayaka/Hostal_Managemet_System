@@ -34,8 +34,8 @@ public class Student {
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Reservation> reservationList = new ArrayList<>();
 
-    public Student(String id, String name, String address, String contact_no, String dob, String gender) {
-        this.student_id = id;
+    public Student(String student_id, String name, String address, String contact_no, String dob, String gender) {
+        this.student_id = student_id;
         this.name = name;
         this.address = address;
         this.contactNo = contact_no;

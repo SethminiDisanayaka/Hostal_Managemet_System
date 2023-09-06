@@ -33,7 +33,7 @@ public class StudentDAOImpl implements StudentDAO {
         Session session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
-        String sql = "SELECT * FROM student ORDER BY CAST(SUBSTRING(id, 2) AS UNSIGNED)";
+        String sql = "SELECT * FROM student ORDER BY CAST(SUBSTRING(student_id, 2) AS UNSIGNED)";
         NativeQuery sqlQuery = session.createSQLQuery(sql);
 
         sqlQuery.addEntity(Student.class);
@@ -73,7 +73,7 @@ public class StudentDAOImpl implements StudentDAO {
 
         // session.createQuery("FROM employee ORDER BY CAST(SUBSTRING(EmpID, 2) AS UNSIGNED) DESC LIMIT 1");
         try{
-            String sql = "SELECT * FROM student ORDER BY CAST(SUBSTRING(id, 2) AS UNSIGNED) DESC LIMIT 1";
+            String sql = "SELECT * FROM student ORDER BY CAST(SUBSTRING(student_id, 2) AS UNSIGNED) DESC LIMIT 1";
             NativeQuery sqlQuery = session.createSQLQuery(sql);
 
             sqlQuery.addEntity(Student.class);
